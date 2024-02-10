@@ -2,6 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
+import userRoute from "./routes/user.route.js";
+
 dotenv.config();
 
 const app = express();
@@ -17,3 +19,6 @@ app.listen(3000, () => {
       console.error("Error connecting to MongoDB:", error);
     });
 });
+
+// use the user route
+app.use("/api/user", userRoute);
