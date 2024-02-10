@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 // create api routes
-router.get("/", userRoute) ;
+router.get("/test", userRoute) ;
 
 
 export default router;
